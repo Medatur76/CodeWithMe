@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(67, 67, 67);
+}
+#header {
+    margin: auto;
+    text-align: center;
+    color: rgb(34, 255, 0);
+}
+#typewriter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+#cursor {
+    animation: blink .6s linear infinite alternate;
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    background-color: black;
+    margin-left: 2px;
+    margin-bottom: 1px;
+}
+@keyframes imageAnim {
+    
+}
+.codeImage {}
+.Highlighted {}
