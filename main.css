@@ -1,15 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
 body {
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(80, 80, 80);
 }
 #header {
     margin: auto;
     text-align: center;
     color: rgb(34, 255, 0);
+    font-size: calc(1vh + 1vw);
 }
+
+#title {
+    font-size: calc(calc(1vh + 1vw)*2);
+}
+
+#subtitle, #title {
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 87.5;
+}
+
 #typewriter {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 @keyframes blink {
     0% {opacity: 1;}
@@ -21,13 +45,20 @@ body {
     animation: blink .6s linear infinite alternate;
     display: inline-block;
     width: 2px;
-    height: 15px;
-    background-color: black;
+    height: calc(calc(1vh + 1vw)*1.1);
+    background-color: white;
     margin-left: 2px;
     margin-bottom: 1px;
 }
-@keyframes imageAnim {
-    
+
+#photos {
+    --height: min(10vh, 10vw);
+    top: calc(1vh * 13);
+    left: 130px;
+    position: absolute;
 }
-.codeImage {}
-.Highlighted {}
+
+#photos > * {
+    height: var(--height);
+    margin: 30px;
+}

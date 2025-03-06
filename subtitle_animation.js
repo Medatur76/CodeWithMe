@@ -1,12 +1,16 @@
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const element = document.getElementById("languages");
-const languages = ['HTML', 'JavaScript', 'Java', 'Python', 'TypeScript'];
-const colors = ['207, 70, 2', '207, 176, 2', '207, 2, 2', '237, 234, 13', '49, 78, 166']
+const languages = [
+    { text:'HTML', color: '207, 70, 2'},
+    { text: 'JavaScript', color: '207, 176, 2'},
+    { text: 'Java', color: '207, 2, 2'},
+    { text: 'Python', color: '237, 234, 13'}, 
+    { text: 'TypeScript', color: '49, 78, 166'}];
 element.textContent = "";
 let i = 0;
 async function write() {
-    element.style = "color: rgb(" + colors[i] + ")";
-    const letters = languages[i].split("");
+    element.style = "color: rgb(" + languages[i].color + ")";
+    const letters = languages[i].text.split("");
     for (let a = 0; a < letters.length; a++) {
         element.textContent += letters[a];
         await sleep(100);
